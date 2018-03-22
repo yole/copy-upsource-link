@@ -1,0 +1,24 @@
+<idea-plugin>
+    <id>copy-upsource-link</id>
+    <name>Copy Upsource Link</name>
+    <vendor email="yole@jetbrains.com">Dmitry Jemerov</vendor>
+
+    <description>Copies the Upsource link to the selected class</description>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action class="ru.yole.copyupsourcelink.CopyUpsourceLinkAction" id="CopyUpsourceLink"
+                text="Copy Upsource Link">
+            <add-to-group group-id="CutCopyPasteGroup" anchor="after" relative-to-action="CopyPaths"/>
+        </action>
+    </actions>
+</idea-plugin>
